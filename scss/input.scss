@@ -1,0 +1,174 @@
+$main-width: 1200px;
+$width100: 100%;
+
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin links {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 250;
+  text-align: center;
+}
+
+@mixin bodyMargin {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 5% auto;
+}
+
+body {
+  font-family: 'Roboto Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.width-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0px auto;
+}
+header {
+  width: 100%;
+  background-color: lighten(#2a2a2a, 10%);
+
+}
+.topNav {
+  @include flex-row;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  background-color: lighten(#2a2a2a, 10%);
+  height: 40px;
+  width: 80%;
+  a {
+    display: flex;
+    @include links;
+    width: 100px;
+  }
+}
+
+.width-topNav-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+
+  .mainNav {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  .logo {
+    margin-right: 5%;
+  }
+  .topNavColumnTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .searchBar {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  a {
+    @include links;
+  }
+}
+
+.mainHeader {
+  width: 100%;
+  height: 550px;
+  background-color: #efeee1;
+  .shopBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #snow {
+      position: relative;
+    }
+    #clearance {
+      position: absolute;
+      margin-top: 100px;
+    }
+    #shopBtn {
+      position: absolute;
+      margin-top: 460px;
+    }
+  }
+}
+
+.clearanceRow {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.body-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 5% auto;
+
+  .highlights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hightlight-divs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+    width: 80%;
+  }
+  .highlighter {
+    width: 500px;
+  }
+  .clearance {
+    display: flex;
+    flex-direction: column;
+  }
+  .items{
+    @include flex-row;
+    justify-content: space-around;
+
+  }
+  .details{
+    @include flex-row;
+    justify-content: center;
+  }
+}
+
+.bottom-banner {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  align-items: center;
+}
+.bottom-banner-options {
+  @include flex-row;
+  height: 350px;
+  justify-content: space-between;
+
+  width: 80%;
+}
+.top-categories, .we-love-brands {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.giftcard {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
